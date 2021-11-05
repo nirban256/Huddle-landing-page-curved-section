@@ -345,7 +345,7 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-bottom: 8rem;
+    margin-bottom: 5rem;
   }
   footer .footer .newsletter form input {
     padding: 0.6rem 0 0.6rem 0.5rem;
@@ -938,6 +938,7 @@ p {
   }
   footer .footer .newsletter {
     padding-top: 1rem;
+    margin-left: 4rem;
   }
   footer .footer .newsletter h3 {
     padding-bottom: 1rem;
