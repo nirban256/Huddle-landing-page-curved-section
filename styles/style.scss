@@ -1,0 +1,962 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+// Variables
+$pink : hsl(322, 100%, 66%);
+$light-pink: hsl(321, 100%, 78%);
+$light-red: hsl(0, 100%, 63%);
+
+$cyan: hsl(192, 100%, 9%);
+$blue: hsl(207, 100%, 98%);
+
+$heading: 'Poppins', sans-serif;
+$body: 'Open Sans', sans-serif;
+
+$light: 400;
+$medium: 600;
+$bold: 700;
+
+@mixin flex-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin flex {
+    display: flex;
+    align-items: center;
+}
+
+@mixin direction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin text {
+    text-align: center;
+}
+
+@mixin flex-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+// styles
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    line-height: 1.5;
+}
+
+h1, h2{
+    color: $cyan;
+}
+
+h1, h2{
+    font-weight: $bold;
+    font-family: $heading;
+}
+
+p{
+    font-family: $body;
+    font-weight: $light;
+}
+
+@media screen and (max-width: 650px) {
+
+    body{
+        @include text;
+    }
+
+    header{
+        nav{
+            padding: 2rem 1.3rem 6rem 1.3rem;
+            @include flex-box;
+
+            img{
+                min-width: 35%;
+                max-width: 40%;
+            }
+
+            button{
+                background: transparent;
+                color: $pink;
+                border: 1px solid $pink;
+                border-radius: 1.3rem;
+                font-weight: $medium;
+                padding: 0.4rem 0.7rem;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.246);
+            }
+    
+            button:hover{
+                color: $light-pink;
+                border: 1px solid $light-pink;
+                cursor: pointer;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.246);
+            }
+        }
+    }
+
+    main{
+
+        p{
+            color: $cyan;
+        }
+
+        .hero{
+            @include text;
+            padding: 6rem 2rem 5rem 2rem;
+
+            h1{
+                font-size: 2rem;
+                padding-bottom: 1.5rem;
+            }
+
+            p{
+                padding-bottom: 4rem;
+            }
+
+            button{
+                background: $pink;
+                color: $blue;
+                padding: 0.9rem 4rem;
+                border: none;
+                border-radius: 1.5rem;
+                font-weight: $bold;
+                box-shadow: 0 3px 5px hsla(192, 100%, 9%, 0.233);
+            }
+
+            button:hover{
+                background: $light-pink;
+                cursor: pointer;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.246);
+            }
+
+            img{
+                max-width: 100%;
+                padding-top: 7rem;
+            }
+        }
+
+        .stats{
+            
+            @include direction;
+
+            .community{
+                
+                text-align: left;
+                margin-bottom: 8rem;
+                h1{
+                    font-size: 3rem;
+                }
+
+                p{
+                    font-size: 1rem;
+                }
+
+                img{
+                    max-width: 60px;
+                }
+            }
+
+            .message{
+                
+                text-align: left;
+                margin-bottom: 3rem;
+                h1{
+                    font-size: 3rem;
+                }
+
+                p{
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        #grow{
+
+            margin: 4rem 0;
+
+            img{
+                max-width: 100%;
+                display: block;
+            }
+            .grow{
+                @include flex-reverse;
+                padding: 0 1rem;
+                background: $blue;
+
+                img{
+                    max-width: 80vw;
+                    padding-top: 2rem;
+                }
+
+                .box-1{
+                    padding-top: 5rem;
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+
+        .conversation{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 6rem 0;
+            padding: 0 1rem;
+
+            img{
+                max-width: 80vw;
+            }
+
+            .box-2{
+                padding-top: 5rem;
+            }
+        }
+
+        #users{
+            margin: 4rem 0;
+            img{
+                max-width: 100%;
+                display: block;
+            }
+
+            .users{
+                @include flex-reverse;
+                background: $blue;
+                padding: 0 1rem;
+
+                img{
+                    max-width: 80vw;
+                    padding-top: 2rem;
+                }
+
+                .box-3{
+                    padding-top: 5rem;
+                    padding-bottom: 2rem;
+                }
+            }
+        }
+
+        .communities{
+            text-align: center;
+            margin: 10rem 0;
+            padding: 0 1rem;
+
+            h2{
+                padding-bottom: 2rem;
+            }
+
+            button{
+                background: $pink;
+                color: $blue;
+                padding: 0.8rem 5rem;
+                border: none;
+                border-radius: 1.5rem;
+                font-weight: $bold;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.246);
+            }
+
+            button:hover{
+                background: $light-pink;
+                cursor: pointer;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.246);
+            }
+        }
+    }
+
+    footer{
+
+        text-align: left;
+        color: $blue;
+
+        img{
+            max-width: 100%;
+            display: block;
+        }
+
+        .logo{
+            padding-bottom: 1rem;
+        }
+
+        .footer{
+            @include flex-reverse;
+            background: $cyan;
+            padding: 4rem 1.5rem 0 2rem;
+
+            .description{
+                .contact{
+                    
+                    .phone{
+                        @include flex;
+                        padding: 2rem 0;
+
+                        span{
+                            padding-left: 1rem;
+                        }
+                    }
+
+                    .email{
+                        @include flex;
+                        padding-bottom: 1rem;
+
+                        span{
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .socials{
+
+                padding: 1rem 0;
+
+                nav ul{
+                    display: flex;
+                    align-items: center;
+                }
+
+                nav ul li{
+                    list-style-type: none;
+                }
+
+                li:first-child{
+                    padding-right: 1rem;
+                }
+
+                li:last-child{
+                    padding-left: 1rem;
+                }
+
+                i{
+                    color: white;
+                }
+
+                i:hover{
+                    color: skyblue;
+                }
+            }
+
+            .newsletter{
+                padding-top: 1rem;
+
+                h3{
+                    padding-bottom: 1rem;
+                }
+
+                p{
+                    padding-bottom: 2rem;
+                }
+
+                form{
+
+                    display: flex;
+                    flex-direction: column;
+                    margin-bottom: 5rem;
+
+                    input{
+                        padding: 0.6rem 0 0.6rem 0.5rem;
+                        border-radius: 5px;
+                        border: none;
+                        outline: none;
+                        margin-bottom: 1rem;
+                    }
+    
+                    button{
+                        background: $pink;
+                        color: $blue;
+                        padding: 0.8rem 0.1rem;
+                        border: none;
+                        border-radius: 5px;
+                        font-weight: $bold;
+                        margin-left: 50vw;
+                    }
+
+                    button:hover{
+                        background: $light-pink;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) and (min-width: 650px) {
+
+    header{
+        nav{
+            padding: 2rem;
+            @include flex-box;
+
+            button{
+                background: transparent;
+                color: $pink;
+                border: 1px solid $pink;
+                padding: 0.5rem 2rem;
+                border-radius: 1.3rem;
+                font-weight: $medium;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.246);
+            }
+
+            button:hover{
+                color: $light-pink;
+                border: 1px solid $light-pink;
+                cursor: pointer;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.246);
+            }
+        }
+    }
+
+    main{
+        .hero{
+            @include text;
+            padding: 6rem 2rem 5rem 2rem;
+
+            h1{
+                font-size: 2rem;
+            }
+
+            p{
+                padding: 2rem 12rem;
+            }
+
+            button{
+                background: $pink;
+                color: $blue;
+                padding: 0.9rem 6rem;
+                border: none;
+                border-radius: 1.5rem;
+                font-weight: $bold;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.246);
+            }
+
+            button:hover{
+                background: $light-pink;
+                cursor: pointer;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.246);
+            }
+
+            img{
+                max-width: 85%;
+                padding-top: 7rem;
+            }
+        }
+
+        .stats{
+            @include flex-box;
+            padding: 2rem 8rem 3rem 8rem;
+
+            .community{
+                
+                h1{
+                    font-size: 4rem;
+                }
+                p{
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+
+            .message{
+                h1{
+                    font-size: 4rem;
+                }
+                p{
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        #grow{
+
+            margin: 4rem 0;
+
+            img{
+                max-width: 100%;
+                display: block;
+            }
+            .grow{
+                @include flex-box;
+                padding: 0 4rem;
+                background: $blue;
+
+                img{
+                    max-width: 35vw;
+                }
+
+                .box-1{
+                    padding-right: 1rem;
+                }
+            }
+        }
+
+        .conversation{
+            @include flex-box;
+            margin: 6rem 0;
+            padding: 0 2rem 0 4rem;
+
+            img{
+                max-width: 40vw;
+            }
+
+            .box-2{
+                padding-left: 7.5rem;
+            }
+        }
+
+        #users{
+
+            margin: 4rem 0;
+
+            img{
+                max-width: 100%;
+                display: block;
+            }
+
+            .users{
+                @include flex-box;
+                padding: 0 2rem 0 2rem;
+                background: $blue;
+
+                img{
+                    max-width: 38vw;
+                }
+
+                .box-3{
+                    padding-right: 3rem;
+                }
+            }
+        }
+
+        .communities{
+            text-align: center;
+            margin: 8rem 0;
+
+            h2{
+                padding-bottom: 2rem;
+            }
+
+            button{
+                background: $pink;
+                color: $blue;
+                padding: 0.9rem 5.5rem;
+                border: none;
+                border-radius: 1.5rem;
+                font-weight: $bold;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.246);
+            }
+
+            button:hover{
+                background: $light-pink;
+                cursor: pointer;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.246);
+            }
+        }
+    }
+
+    footer{
+
+        color: $blue;
+
+        img{
+            max-width: 100%;
+            display: block;
+        }
+
+        .logo{
+            padding-bottom: 1rem;
+        }
+
+        .footer{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10rem;
+            background: $cyan;
+            padding: 4rem;
+
+            .description{
+                .contact{
+                    
+                    .phone{
+                        @include flex;
+                        padding: 1rem 0;
+
+                        span{
+                            padding-left: 1rem;
+                        }
+                    }
+
+                    .email{
+                        @include flex;
+                        padding-bottom: 1rem;
+
+                        span{
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .socials{
+
+                padding-top: 1rem;
+
+                nav ul{
+                    display: flex;
+                    align-items: center;
+                }
+
+                nav ul li{
+                    list-style-type: none;
+                }
+
+                li:first-child{
+                    padding-right: 1rem;
+                }
+
+                li:last-child{
+                    padding-left: 1rem;
+                }
+
+                i{
+                    color: white;
+                }
+
+                i:hover{
+                    color: skyblue;
+                }
+            }
+
+            .newsletter{
+                padding-top: 1rem;
+
+                h3{
+                    padding-bottom: 1rem;
+                }
+
+                p{
+                    padding-bottom: 2rem;
+                }
+
+                input{
+                    padding: 0.6rem 0 0.6rem 0.5rem;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                }
+
+                button{
+                    background: $pink;
+                    color: $blue;
+                    padding: 0.6rem 1rem;
+                    border: none;
+                    border-radius: 3px;
+                    font-weight: $bold;
+                }
+        
+                button:hover{
+                    background: $light-pink;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1100px) {
+    
+    header{
+        nav{
+            padding: 2rem;
+            @include flex-box;
+
+            button{
+                background: transparent;
+                color: $pink;
+                border: 1px solid $pink;
+                padding: 0.5rem 2rem;
+                border-radius: 1.3rem;
+                font-weight: $medium;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.246);
+            }
+
+            button:hover{
+                color: $light-pink;
+                border: 1px solid $light-pink;
+                cursor: pointer;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.246);
+            }
+        }
+    }
+
+    main{
+        .hero{
+            @include text;
+            padding: 6rem 2rem 5rem 2rem;
+
+            h1{
+                font-size: 2rem;
+            }
+
+            p{
+                padding: 2rem 12rem;
+            }
+
+            button{
+                background: $pink;
+                color: $blue;
+                padding: 0.9rem 6rem;
+                border: none;
+                border-radius: 1.5rem;
+                font-weight: $bold;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.246);
+            }
+
+            button:hover{
+                background: $light-pink;
+                cursor: pointer;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.246);
+            }
+
+            img{
+                max-width: 85%;
+                padding-top: 7rem;
+            }
+        }
+
+        .stats{
+            @include flex-box;
+            padding: 2rem 8rem 3rem 8rem;
+
+            .community{
+                
+                h1{
+                    font-size: 4rem;
+                }
+                p{
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+
+            .message{
+                h1{
+                    font-size: 4rem;
+                }
+                p{
+                    font-size: 1rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        #grow{
+
+            margin: 4rem 0;
+
+            img{
+                max-width: 100%;
+                display: block;
+            }
+            .grow{
+                @include flex-box;
+                padding: 0 4rem;
+                background: $blue;
+
+                img{
+                    max-width: 35vw;
+                }
+
+                .box-1{
+                    padding-right: 1rem;
+                }
+            }
+        }
+
+        .conversation{
+            @include flex-box;
+            margin: 6rem 0;
+            padding: 0 2rem 0 4rem;
+
+            img{
+                max-width: 40vw;
+            }
+
+            .box-2{
+                padding-left: 7.5rem;
+            }
+        }
+
+        #users{
+
+            margin: 4rem 0;
+
+            img{
+                max-width: 100%;
+                display: block;
+            }
+
+            .users{
+                @include flex-box;
+                padding: 0 2rem 0 2rem;
+                background: $blue;
+
+                img{
+                    max-width: 38vw;
+                }
+
+                .box-3{
+                    padding-right: 3rem;
+                }
+            }
+        }
+
+        .communities{
+            text-align: center;
+            margin: 8rem 0;
+
+            h2{
+                padding-bottom: 2rem;
+            }
+
+            button{
+                background: $pink;
+                color: $blue;
+                padding: 0.9rem 5.5rem;
+                border: none;
+                border-radius: 1.5rem;
+                font-weight: $bold;
+                box-shadow: 0 3px 5px rgba(0, 0, 0, 0.246);
+            }
+
+            button:hover{
+                background: $light-pink;
+                cursor: pointer;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.246);
+            }
+        }
+    }
+
+    footer{
+
+        color: $blue;
+
+        img{
+            max-width: 100%;
+            display: block;
+        }
+
+        .logo{
+            padding-bottom: 1rem;
+        }
+
+        .footer{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10rem;
+            background: $cyan;
+            padding: 4rem;
+
+            .description{
+                .contact{
+                    
+                    .phone{
+                        @include flex;
+                        padding: 1rem 0;
+
+                        span{
+                            padding-left: 1rem;
+                        }
+                    }
+
+                    .email{
+                        @include flex;
+                        padding-bottom: 1rem;
+
+                        span{
+                            padding-left: 1rem;
+                        }
+                    }
+                }
+            }
+
+            .socials{
+
+                padding-top: 1rem;
+
+                nav ul{
+                    display: flex;
+                    align-items: center;
+                }
+
+                nav ul li{
+                    list-style-type: none;
+                }
+
+                li:first-child{
+                    padding-right: 1rem;
+                }
+
+                li:last-child{
+                    padding-left: 1rem;
+                }
+
+                i{
+                    color: white;
+                }
+
+                i:hover{
+                    color: skyblue;
+                }
+            }
+
+            .newsletter{
+                padding-top: 1rem;
+
+                h3{
+                    padding-bottom: 1rem;
+                }
+
+                p{
+                    padding-bottom: 2rem;
+                }
+
+                input{
+                    padding: 0.6rem 0 0.6rem 0.5rem;
+                    border-radius: 5px;
+                    border: none;
+                    outline: none;
+                }
+
+                button{
+                    background: $pink;
+                    color: $blue;
+                    padding: 0.6rem 1rem;
+                    border: none;
+                    border-radius: 3px;
+                    font-weight: $bold;
+                }
+        
+                button:hover{
+                    background: $light-pink;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}
